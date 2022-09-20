@@ -1,0 +1,46 @@
+<div class="example-container">
+  <div>
+      <mat-toolbar color="warn">
+          <!-- <button mat-icon-button (click)="sidenav.toggle()">
+              <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+              <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+          </button> -->
+          <div style="width: 100%;justify-content: center; text-align: center;">
+             <span>User</span>
+          </div>
+          <span class="example-spacer"></span>
+          <!-- <div style="justify-content: center;display: flex;margin: initial;">
+            <h4 style="margin-right: 10px;font-size: 15px;">
+              <span style="font-size: 17px;font-weight:bold;letter-spacing: 1px;">Admin</span>
+            </h4>
+            </div> -->
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+
+              </button>
+          </mat-menu>
+      </mat-toolbar>
+  </div>
+  <!---->
+  <mat-sidenav-container class="example-sidenav-container">
+      <mat-sidenav #sidenav style="width: 28%" mode="push" opened="false">
+          <mat-divider></mat-divider>
+          <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="['/user/users']" style="cursor: pointer">
+              <mat-icon>home</mat-icon>
+              <span>Menu Principal</span>
+          </button>
+          <!---Inicio User-->
+          <button mat-menu-item (click)="showUser = !showUser" href="/user/users" style="cursor: pointer">
+            <!-- <mat-icon>shopping_cart</mat-icon> -->
+            <!-- <span class="full-width"*ngIf="isExpanded || isShowing">User</span> -->
+        </button>
+
+      </mat-sidenav>
+      <mat-sidenav-content>
+          <router-outlet></router-outlet>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

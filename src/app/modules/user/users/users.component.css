@@ -1,0 +1,100 @@
+.principal{
+  display: flex;
+  flex-direction: column;
+}
+/* .nav-busqueda{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  float: right;
+  background-color: white !important;
+} */
+.titulo{
+  font-size: 24px;
+  margin:0;
+  background-color: white !important;
+  padding-left: 3%;
+  font-weight: bold;
+}
+
+#boton-regresar{
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 1.5% 46%;
+}
+
+
+.campo-row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.name{
+  width: 10%;
+    font-size: 16px;
+  }
+  .email{
+    width: 10%;
+    font-size: 16px;
+  }
+  .phone{
+    width: 10%;
+    font-size: 16px;
+  }
+  .city{
+    width: 10%;
+    font-size: 16px;
+  }
+  .acciones{
+    width: 15%;
+    font-size: 16px;
+  }
+  table {
+    width: 100%;
+  }
+  table tr:nth-child(odd) {
+    background: #fff;
+  }
+  table tr:nth-child(even) {
+    background: lightsteelblue;
+  }
+  .mat-row{
+    height: 6px;
+  }
+  td{
+    height: 6px;
+    min-height: min-content;
+  }
+
+  @media (max-width: 1150px){
+    .name{
+      width: 12%;
+    }
+    .email{
+      width: 10%;
+    }
+    .phone{
+      width: 10%;
+    }
+    .city{
+      width: 10%;
+    }
+
+  }
+
+  td, th {
+    width: 10%;
+  }
+
+  th{
+    background-color: lightsteelblue;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+  }
+
+  h2{
+    margin-left: 50px;
+  }

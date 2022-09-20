@@ -1,0 +1,46 @@
+.principal{
+  display: flex;
+  flex-direction: column;
+}
+.titulo{
+  font-size: 24px;
+  margin:0;
+  background-color: white !important;
+  padding-left: 3%;
+  font-weight: bold;
+}
+.title{
+  width: 10%;
+    font-size: 16px;
+  }
+  table {
+    width: 100%;
+  }
+  table tr:nth-child(odd) {
+    background: #fff;
+  }
+  table tr:nth-child(even) {
+    background: lightsteelblue;
+  }
+  .mat-row{
+    height: 6px;
+  }
+  td{
+    height: 6px;
+    min-height: min-content;
+  }
+  th{
+    background-color: lightsteelblue;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+  }
+  @media (max-width: 1150px){
+    .title{
+      width: 12%;
+    }
+  }
+
+  h2{
+    margin-left: 50px;
+  }

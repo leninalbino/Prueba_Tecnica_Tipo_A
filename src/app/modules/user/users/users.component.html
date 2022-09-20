@@ -1,0 +1,61 @@
+<div class="principal">
+  <div class="nav-busqueda ">
+    <h3 class="titulo" style="justify-content: center;padding-top: 2%;width: 30%;"> List All Users</h3>
+
+    <div class="container text-center">
+      <div class="row row-cols-2">
+        <div class="col d-flex"><h2>Total User registered = {{totalUsersRegistered}}</h2></div>
+        <div class="col"> <h2>Total Post Users = {{sumPosts}}</h2></div>
+      </div>
+    </div>
+
+
+  <div class="mat-elevation-z8" style="margin-left: 50px;width: 92%;">
+    <table mat-table [dataSource]="dataSource" class="table-responsive" matSort>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="name" class="name">Email</th>
+        <td mat-cell *matCellDef="let row" class="name">
+          {{row.name}}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="email" class="email">Email</th>
+        <td mat-cell *matCellDef="let row" class="email">
+          {{row.email}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="phone" class="phone">Phone</th>
+        <td mat-cell *matCellDef="let row" class="phone">
+          {{row.phone}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="city" class="city">City</th>
+        <td mat-cell *matCellDef="let row" class="city">
+          {{row.address.city}}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; " class="header-table"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="findDetailsById(row)"></tr>
+      <!-- <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No se encontraron resultados para "{{input.value}}"</td>
+      </tr> -->
+    </table>
+    <mat-paginator [pageSizeOptions]="[5,10,15]" aria-label="Select page of users"></mat-paginator>
+  </div>
+  <div>
+    <div>
+      <div style="display: block; ">
+         <canvas baseChart
+          [data]="polarAreaChartData"
+          [legend]="polarAreaLegend"
+          [type]="polarAreaChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>
